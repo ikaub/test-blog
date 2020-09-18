@@ -40,8 +40,10 @@ const CommentsSection = ({post}) => {
                     <>
                         <Header>Comments:</Header>
                         <CommentsList>
-                            {comments.map(comment => (
-                                <li><Comment author={comment.author} comment={comment.comment}/></li>
+                            {comments.map((comment, index) => (
+                                <li key={index}>
+                                    <Comment author={comment.author} comment={comment.comment}/>
+                                </li>
                             ))}
                         </CommentsList>
                     </>

@@ -41,6 +41,9 @@ export const fetchPosts = () => {
 }
 
 export const addPostComment = (post: Post_I, comment: Comment_I) => {
+    const posts = JSON.parse(Cookies.get('posts'));
+    posts[posts.findIndex(p => p.id == post.id)].comments.push(comment);
+    Cookies.set('posts', JSON.stringify(posts));
     return {
         type: ADD_POST_COMMENT,
         payload: {post, comment}

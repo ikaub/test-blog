@@ -7,7 +7,7 @@ const postReducer = (state: State_I = {posts: [], lastId: 0}, action) => {
             return {
                 ...state,
                 posts: action.payload,
-                lastId: action.payload.length + 1,
+                lastId: action.payload.length + 100,
             }
         case CREATE_NEW_POST:
             return {
@@ -26,7 +26,7 @@ const postReducer = (state: State_I = {posts: [], lastId: 0}, action) => {
             return {
                 ...state,
                 posts: action.payload,
-                lastId: action.payload.length + 1
+                lastId: action.payload.length + 100
             }
         default:
             return state;
