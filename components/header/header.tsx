@@ -1,4 +1,4 @@
-import {Button, Label, Wrapper} from "./header.styles";
+import {Button, Label, Wrapper} from "../styles/header.styles";
 import Link from 'next/link';
 
 const Header = () => {

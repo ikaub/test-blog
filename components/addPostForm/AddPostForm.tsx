@@ -1,4 +1,4 @@
-import {Wrapper, Header, TitleInput, BodyInput, SubmitButton} from "./addPostForm.styles";
+import {Wrapper, Header, TitleInput, BodyInput, SubmitButton} from "../styles/addPostForm.styles";
 import {Dispatch, useState} from 'react';
 import {Post_I, State_I} from "../../types/types";
 import {useDispatch, useSelector} from 'react-redux';

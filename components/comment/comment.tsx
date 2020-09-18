@@ -1,4 +1,4 @@
-import {AuthorName, CommentText, Wrapper} from "./comment.styles";
+import {AuthorName, CommentText, Wrapper} from "../styles/comment.styles";
 
 const Comment = ({author, comment}) => {
     return (

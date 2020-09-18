@@ -1,5 +1,5 @@
-import {BodyInput, Header, SubmitButton, TitleInput} from "../addPostForm/addPostForm.styles";
-import {CommentsList, CommentsWrapper} from "../postId.styles";
+import {BodyInput, Header, SubmitButton, TitleInput} from "../styles/addPostForm.styles";
+import {CommentsList, CommentsWrapper} from "../styles/postId.styles";
 import Comment from "../comment/comment";
 import {Comment_I} from "../../types/types";
 import {addPostComment} from "../../redux/actions/actions";

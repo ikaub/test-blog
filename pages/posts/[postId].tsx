@@ -1,6 +1,6 @@
 import Head from "next/head";
 import {Post_I, State_I} from "../../types/types";
-import {BodyText, Title, Wrapper} from "../../components/postId.styles";
+import {BodyText, Title, Wrapper} from "../../components/styles/postId.styles";
 import {useSelector, useDispatch} from 'react-redux';
 import {GetServerSidePropsContext} from "next";
 import CommentsSection from "../../components/comments-section/comments-section";

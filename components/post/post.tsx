@@ -1,4 +1,4 @@
-import {Wrapper, Title, Body} from "./post.styles";
+import {Wrapper, Title, Body} from "../styles/post.styles";
 import Link from "next/link";
 
 const Post = ({title, body, id}) => {

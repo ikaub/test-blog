@@ -1,5 +1,5 @@
 import Post from "../post/post";
-import {Wrapper, PostsList} from "./postsSection.styles";
+import {Wrapper, PostsList} from "../styles/postsSection.styles";
 import {useEffect} from "react";
 import {fetchPosts} from "../../redux/actions/actions";
 import {useSelector, useDispatch} from 'react-redux';
