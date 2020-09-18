@@ -1,4 +1,4 @@
-import {FETCH_POSTS, CREATE_NEW_POST, ADD_POST_COMMENT} from "../actions/actions";
+import {FETCH_POSTS, CREATE_NEW_POST, ADD_POST_COMMENT, LOAD_PERSISTED_POSTS} from "../actions/actions";
 import {State_I} from "../../types/types";
 
 const postReducer = (state: State_I = {posts: [], lastId: 0}, action) => {
@@ -7,7 +7,7 @@ const postReducer = (state: State_I = {posts: [], lastId: 0}, action) => {
             return {
                 ...state,
                 posts: action.payload,
-                lastId: action.payload.slice(-1)[0],
+                lastId: action.payload.length + 1,
             }
         case CREATE_NEW_POST:
             return {
@@ -17,11 +17,16 @@ const postReducer = (state: State_I = {posts: [], lastId: 0}, action) => {
             }
         case ADD_POST_COMMENT:
             const {post, comment} = action.payload;
-            console.log(action.payload);
             post.comments.push(comment);
             return {
                 ...state,
                 posts: state.posts.map(p => p.id != post.id ? p : post)
+            }
+        case LOAD_PERSISTED_POSTS:
+            return {
+                ...state,
+                posts: action.payload,
+                lastId: action.payload.length + 1
             }
         default:
             return state;

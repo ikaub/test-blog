@@ -1,6 +1,5 @@
 import {AuthorName, CommentText, Wrapper} from "./comment.styles";
 
-
 const Comment = ({author, comment}) => {
     return (
         <Wrapper>

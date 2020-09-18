@@ -36,6 +36,7 @@ const AddPostForm = () => {
             };
             dispatch(createNewPost(post));
             router.push('/');
+
         }
     }
 
