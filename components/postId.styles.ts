@@ -17,7 +17,7 @@ export const BodyText = styled.div`
     line-height: 1.5;
 `;
 
-export const CommentsSection = styled.div`
+export const CommentsWrapper = styled.div`
     margin-top: 8rem;
 `;
 

@@ -4,6 +4,7 @@ import {Post_I, State_I} from "../../types/types";
 import {useDispatch, useSelector} from 'react-redux';
 import {createNewPost} from "../../redux/actions/actions";
 import {useRouter} from 'next/router';
+import Error from "../error/error";
 
 interface FormInput_I {
     title: string,
@@ -16,20 +17,26 @@ const AddPostForm = () => {
     const dispatch = useDispatch();
 
     const [state, setState]: [FormInput_I, Dispatch<FormInput_I>] = useState({title: "", body: ""});
+    const [error, setError] = useState(false);
 
     const handleChange = (event) => {
         setState({...state, [event.target.name]: event.target.value});
+        setError(false);
     }
 
     const handleSubmit = () => {
-        const post: Post_I = {
-            title: state.title,
-            body: state.body,
-            id: postId + 1,
-            comments: []
-        };
-        dispatch(createNewPost(post));
-        router.push('/');
+        if (!state.body || !state.title) {
+            setError(true);
+        } else {
+            const post: Post_I = {
+                title: state.title,
+                body: state.body,
+                id: postId + 1,
+                comments: []
+            };
+            dispatch(createNewPost(post));
+            router.push('/');
+        }
     }
 
     return (
@@ -37,6 +44,7 @@ const AddPostForm = () => {
             <Header>
                 Create New Post
             </Header>
+            {error ? <Error/> : null}
             <TitleInput
                 name='title'
                 value={state.title}
