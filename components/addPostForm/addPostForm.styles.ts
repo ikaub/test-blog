@@ -35,6 +35,7 @@ export const SubmitButton = styled.button`
     border-radius: 6px;
     box-shadow: 0 1px 10px 1px rgba(0, 0, 0, .4);
     transition: .5s;
+    margin-bottom: 2rem;
     
     &:hover {
         transform: translateY(-3px);

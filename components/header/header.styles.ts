@@ -19,5 +19,12 @@ export const Button = styled.div`
     padding: 2px;
     border-radius: 5px;
     margin-top: 6px;
+    font-weight: bolder;
+    transition: .5s;
+    
+    &:hover {
+        background-color: white;
+        color: black;
+    }
 `;
 

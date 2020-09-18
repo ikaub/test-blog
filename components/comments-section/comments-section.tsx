@@ -45,9 +45,7 @@ const CommentsSection = ({post}) => {
                             ))}
                         </CommentsList>
                     </>
-                    : <BodyText>
-                        There are no comments yet. Be first to leave the comment! :)
-                    </BodyText>
+                    : 'There are no comments yet. Be first to leave the comment! :)'
             }
             <Header>Leave your comment below!</Header>
             {error ? <Error/> : null}

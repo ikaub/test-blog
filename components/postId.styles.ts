@@ -15,6 +15,10 @@ export const BodyText = styled.div`
     font-size: 1.2rem;
     margin-top: 2rem;
     line-height: 1.5;
+    border: 1px solid black;
+    border-radius: 10px;
+    min-height: 300px;
+    padding: 10px;
 `;
 
 export const CommentsWrapper = styled.div`
