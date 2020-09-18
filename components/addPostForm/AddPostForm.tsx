@@ -25,7 +25,8 @@ const AddPostForm = () => {
         const post: Post_I = {
             title: state.title,
             body: state.body,
-            id: postId + 1
+            id: postId + 1,
+            comments: []
         };
         dispatch(createNewPost(post));
         router.push('/');

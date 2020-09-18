@@ -16,3 +16,11 @@ export const BodyText = styled.div`
     margin-top: 2rem;
     line-height: 1.5;
 `;
+
+export const CommentsSection = styled.div`
+    margin-top: 8rem;
+`;
+
+export const CommentsList = styled.ul`
+    list-style-type: none;
+`;
