@@ -12,4 +12,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Deployed application (cookies don't work, unfortunately):
 https://test-blog-nextjs.herokuapp.com/
+https://test-blog-12nk7skzm.vercel.app/
 
