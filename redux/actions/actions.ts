@@ -8,9 +8,12 @@ export const ADD_POST_COMMENT = 'ADD_POST_COMMENT';
 export const LOAD_PERSISTED_POSTS = 'LOAD_PERSISTED_POSTS';
 
 export const createNewPost = (post: Post_I) => {
-    const posts = JSON.parse(Cookies.get('posts'));
-    posts.push(post);
-    Cookies.set('posts', JSON.stringify(posts));
+    const postsStr = Cookies.get('posts');
+    if(postsStr) {
+        const posts = JSON.parse(postsStr);
+        posts.push(post);
+        Cookies.set('posts', JSON.stringify(posts));
+    }
     return {
         type: CREATE_NEW_POST,
         payload: post
@@ -41,9 +44,12 @@ export const fetchPosts = () => {
 }
 
 export const addPostComment = (post: Post_I, comment: Comment_I) => {
-    const posts = JSON.parse(Cookies.get('posts'));
-    posts[posts.findIndex(p => p.id == post.id)].comments.push(comment);
-    Cookies.set('posts', JSON.stringify(posts));
+    const postsStr = Cookies.get('posts');
+    if (postsStr) {
+        const posts = JSON.parse(postsStr);
+        posts[posts.findIndex(p => p.id == post.id)].comments.push(comment);
+        Cookies.set('posts', JSON.stringify(posts));
+    }
     return {
         type: ADD_POST_COMMENT,
         payload: {post, comment}
